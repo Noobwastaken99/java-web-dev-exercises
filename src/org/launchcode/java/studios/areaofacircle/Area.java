@@ -3,9 +3,17 @@ import java.util.Scanner;
 public class Area {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        double rad = 0;
 
-        System.out.println("Enter a radius: ");
-        double rad = input.nextDouble();
+        do {
+            System.out.println("Enter a radius: ");
+            if (input.hasNextDouble()) {
+                rad = input.nextDouble();
+            } else {
+                System.out.println("ERROR!!!!");
+                java.lang.System.exit(0);
+            }
+        } while (rad <= 0);
         // part1 double area = Math.PI * rad * rad;
         // part2
         double area = Circle.getArea(rad);
