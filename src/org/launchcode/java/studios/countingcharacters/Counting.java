@@ -53,7 +53,10 @@ public class Counting {
             finished.put(chr.get(i), num.get(i));
         }
 
-        System.out.println(finished);
+        for(Map.Entry<Character, Integer> entry : finished.entrySet()){
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+        //System.out.println(finished);
 
     }
     public static String filter(String s) {
