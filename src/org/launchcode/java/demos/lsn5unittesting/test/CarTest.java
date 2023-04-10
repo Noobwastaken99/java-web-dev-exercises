@@ -14,10 +14,10 @@ public class CarTest {
     }
 
     //TODO: add emptyTest so we can configure our runtime environment (remove this test before pushing to your personal GitLab account)
-    @Test
-    public void emptyTest() {
-        assertEquals(10,10,.001);
-    }
+//    @Test
+//    public void emptyTest() {
+//        assertEquals(10,10,.001);
+//    }
     //TODO: constructor sets gasTankLevel properly
     @Test
     public void testInitialGasTank() {
