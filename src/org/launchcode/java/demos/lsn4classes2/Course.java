@@ -14,4 +14,28 @@ public class Course {
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Course objects equal.
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "topic='" + topic + '\'' +
+                ", instructor=" + instructor +
+                ", enrolledStudents=" + enrolledStudents +
+                '}';
+    }
+    public boolean equals(Object toBeCompared) {
+        if (toBeCompared == this) {
+            return true;
+        }
+
+        if (toBeCompared == null) {
+            return false;
+        }
+
+        if (toBeCompared.getClass() != getClass()) {
+            return false;
+        }
+
+        Teacher theTeacher = (Teacher) toBeCompared;
+        return theTeacher.getLastName() == instructor.getLastName();
+    }
 }
